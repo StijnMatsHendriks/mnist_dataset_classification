@@ -1,0 +1,12 @@
+version: "2.3" # at least 2.3 necessary, because otherwise runtime:nvidia will not be recognized, see
+# https://github.com/docker/compose/issues/6691
+services:
+  cnn:
+    runtime: nvidia # this used because --gpus-all is not available
+    environment:
+      - NVIDIA_VISIBLE_DEVICES=all
+    build: .
+    ports:
+      - "8888:8888"
+    volumes:
+      - .:/app
