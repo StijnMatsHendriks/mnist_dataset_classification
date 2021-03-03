@@ -17,6 +17,8 @@ class CNN(nn.Module):
         self.fc1 = nn.Linear(9216, 128)
         self.fc2 = nn.Linear(128, 10)
 
+        self.name = "cnn"
+
     def forward(self, x):
         x = self.conv1(x)
         x = F.relu(x)

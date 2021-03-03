@@ -6,4 +6,4 @@ RUN pip install -r requirements.txt
 CMD ["python", "gpu_available.py"]
 #CMD ["python", "ml_perceptron.py"]
 #CMD ["python", "cnn.py"]
-CMD ["python", "leNet_5.py"]
+CMD ["python", "run_mnist_model.py"]

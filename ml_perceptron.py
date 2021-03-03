@@ -15,6 +15,8 @@ class Net(nn.Module):
         self.fc2 = nn.Linear(hidden_sizes[0], hidden_sizes[1])
         self.fc3 = nn.Linear(hidden_sizes[1], output_size)
 
+        self.name = "ml_perceptron"
+
     def forward(self, x):
         x = self.fc1(x)
         x = F.relu(x)
